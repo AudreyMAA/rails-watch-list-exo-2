@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner">
+  <div class="container mt-5">
+    <h1><strong>What's to Watch ?</strong></h1>
+    <h4 class='col-3 mt-3'>Find and create watchlists from all kind of movies!</h4>
+  </div>
+  <p class='home-btn'> <%= link_to 'Create a Watchlist', watchlists_path, target: "_blank" %></p>
+</div>
+
+<div class="mt-5 d-flex">
+  <%= link_to 'Movies', movies_path,  target: "_blank" %>
+  <%= link_to ' Watchlists', watchlists_path,  target: "_blank" %>
+</div>

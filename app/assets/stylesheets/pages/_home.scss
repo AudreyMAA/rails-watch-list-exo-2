@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.banner {
+  background-image:asset-url('homepage-picture.jpeg');
+  background-size:cover;
+  height:auto;
+  background-position: center;
+   // text-align: center;
+  color: white;
+  padding: 170px;
+}
