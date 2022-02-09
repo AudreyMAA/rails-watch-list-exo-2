@@ -6,6 +6,7 @@ class WatchlistsController < ApplicationController
 
   def show
     @watchlist = Watchlist.find(params[:id])
+    @bookmarks = Bookmark.all
   end
 
   def new

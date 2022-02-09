@@ -7,7 +7,7 @@
       <strong><%= @movie.rating %></strong>
     </div>
     <p class='mx-3'><%= @movie.overview %></p>
-    <p class='mx-3'><strong><%= link_to 'Edit movie', edit_movie_path(@movie) %></strong></p>
+    <p class='mx-3'><strong><%= link_to 'Edit movie', edit_movie_path(@movie) %> | <%= link_to 'Add a bookmark',  new_movie_bookmark_path(@movie), target: "_blank" %></strong></p>
   </div>
 </div>
 <p class='mx-5'><%= link_to 'Back to Movies', movies_path %> | <%= link_to 'Home', root_path %></p>

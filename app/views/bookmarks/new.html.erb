@@ -1,0 +1,4 @@
+<%= simple_form_for [ @movie, @bookmark ] do |f| %>
+  <%= f.input :list_name, collection: Bookmark::LISTS %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
