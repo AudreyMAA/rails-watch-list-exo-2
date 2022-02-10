@@ -10,7 +10,7 @@
             <strong><%= bookmark.movie.title %></strong>
             <%= bookmark.movie.rating %>
           </div>
-          <%= link_to 'Voir', movie_path(bookmark.movie), target: "_blank" %>
+          <p><%= link_to 'Voir', movie_path(bookmark.movie), target: "_blank" %> | <%= link_to 'Delete mark', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
         </div>
       </div>
     <% end %>

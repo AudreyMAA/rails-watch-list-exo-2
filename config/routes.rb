@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:new, :create]
   end
   resources :watchlists, only: [:index, :show, :new, :create, :destroy] do
-    resources :bookmarks, only: [:index, :destroy]
+    resources :bookmarks, only: :index
   end
+  resources :bookmarks, only: :destroy
 end

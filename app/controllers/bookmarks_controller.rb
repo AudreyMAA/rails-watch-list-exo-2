@@ -21,6 +21,10 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
+    @bookmark = Bookmark.find(params[:id])
+    if @bookmark.destroy
+      redirect_to watchlist_path(@bookmark.watchlist)
+    end
   end
 
   private
