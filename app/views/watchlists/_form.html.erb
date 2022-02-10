@@ -1,7 +1,7 @@
 <div class="container col-6">
   <%= simple_form_for @watchlist do |f| %>
     <%= f.input :name %>
-    <%= f.input :image %>
+    <%= f.input :image, as: :file %>
     <%= f.submit "Create", class: "btn-new" %>
   <% end %>
 </div>

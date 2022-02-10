@@ -2,6 +2,6 @@
   <%= f.input :title %>
   <%= f.input :overview %>
   <%= f.input :rating%>
-  <%= f.input :poster_url %>
+  <%= f.input :poster_url, as: :file %>
   <%= f.submit "Submit", class: "btn-new" %>
 <% end %>

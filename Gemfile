@@ -29,8 +29,10 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
-
+# Add dotenv to protect my private data
 gem 'dotenv-rails', groups: [:development, :test]
+# Add cloudinary to upload pictures
+gem 'cloudinary', '~> 1.16.0'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'

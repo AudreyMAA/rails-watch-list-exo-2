@@ -11,12 +11,12 @@
     <% @movies.sort.reverse.each do |movie| %>
       <div class="col-2 col-m-4  mt-4">
         <div class="card" style="width: 12rem;">
-          <img class="card-img-top" src="<%= movie.poster_url%>" alt="Card image cap">
+          <img class="card-img-top" src="<%= cl_image_path movie.poster_url.key, height: 300, crop: :fill %>" alt="Card image cap">
           <div class="card-body d-flex justify-content-between">
             <strong><%= movie.title %></strong>
             <%= movie.rating %>
           </div>
-          <%= link_to 'Voir', movie_path(movie), target: "_blank" %>
+          <p><%= link_to 'Voir', movie_path(movie), target: "_blank" %>   | <%= link_to 'Delete', movie_path(movie), method: :delete, data: { confirm: "Are you sure?" } %></p>
         </div>
       </div>
     <% end %>

@@ -10,8 +10,7 @@
     <% @watchlists.sort.reverse.each do |list| %>
       <div class="col-4 mt-3">
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.image%>)">
-
+        <div class="card-category" style="background-image: url('<%= cl_image_path list.image.key, height: 300, crop: :fill %>')">
           <%= link_to "Delete", watchlist_path(list), method: :delete, data: { confirm: "Are you sure?" } %>
           <%= link_to"#{list.name}", watchlist_path(list),  target: "_blank" %>
 
